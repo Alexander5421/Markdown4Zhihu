@@ -76,6 +76,7 @@ def rename_image_ref(m, original=True):
             print(full_img_path)
             img_stem = Path(full_img_path).stem
             if not op.exists(full_img_path):
+                print("The image path "+full_img_path+" is not valid, please check it.")
                 return m.group(0)
     except OSError:
         return m.group(0)
