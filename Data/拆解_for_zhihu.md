@@ -13,17 +13,17 @@ Fast Travel Games
 ## VR交互拆解
 ### 玩家移动方式
 这个游戏比较特殊，玩家想在场景里移动的话就必须在现实里移动，没有其他方式。原因也很简答，需要交互的东西就是一个小小的环形世界。 不过玩家可以通过左摇杆来旋转世界，右摇杆来调整高度（到通关都没发现）
-![示意图](截图/海洋世界.jpg)
+![示意图](https://raw.githubusercontent.com/Alexander5421/Markdown4Zhihu/master/Data/拆解/海洋世界.jpg)
 ### 玩家在世界中的存在
 只有两只蒲公英球。 玩家试图抓取的时候会变小,玩家也可以通过抓取空间中的任意一点，旋转世界。
-![示意图](截图/双手.jpg)
+![示意图](https://raw.githubusercontent.com/Alexander5421/Markdown4Zhihu/master/Data/拆解/双手.jpg)
 ### 物理交互
 玩家的手是可以穿模的，把物体拿起后，物体的也可以穿模。
-![Alt text](截图/穿模.png)
+![Alt text](https://raw.githubusercontent.com/Alexander5421/Markdown4Zhihu/master/Data/拆解/穿模.png)
 ## 本地化
 游戏中环境中不会有文字，所有指示都是用图案的形式。字幕的话和其他游戏固定于玩家视野的方式不同。游戏中的字幕有固定的槽位，当玩家的视角看向某处时，会选择角度最接近的。
 
-![Alt text](截图/字幕示意图.jpg)
+![Alt text](https://raw.githubusercontent.com/Alexander5421/Markdown4Zhihu/master/Data/拆解/字幕示意图.jpg)
 
 ## 画面
 天空盒画的非常好看，游戏中的人物动物的动画都是抽帧的
