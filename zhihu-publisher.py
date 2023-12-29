@@ -50,6 +50,8 @@ def formula_ops(_lines):
 # The support function for image_ops. It will take in a matched object and make sure they are competible
 def rename_image_ref(m, original=True):
     # global image_folder_path
+    # debug
+    print(m.group(2))
     ori_path = m.group(2) if original else m.group(1)
     try:
         if op.exists(ori_path):
@@ -71,6 +73,7 @@ def rename_image_ref(m, original=True):
 
         else:
             full_img_path = op.join(args.file_parent, ori_path)
+            print(full_img_path)
             img_stem = Path(full_img_path).stem
             if not op.exists(full_img_path):
                 return m.group(0)
