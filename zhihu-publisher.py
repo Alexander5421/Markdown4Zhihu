@@ -79,6 +79,15 @@ def rename_image_ref(m, original=True):
             if not op.exists(full_img_path):
                 print("The image path "+full_img_path+" is not valid, please check it.")
                 return m.group(0)
+            img_name = img_stem + Path(full_img_path).suffix
+            img_name_new = img_name
+            if op.exists(op.join(args.image_folder_path, img_name_new)):
+                i = 1
+                while op.exists(op.join(args.image_folder_path, img_name_new)):
+                    img_name_new = img_stem + "_" + str(i) + Path(full_img_path).suffix
+                    i += 1
+            copyfile(full_img_path, op.join(args.image_folder_path, img_name_new))
+            full_img_path = op.join(args.image_folder_path, img_name_new)
     except OSError:
         return m.group(0)
 
