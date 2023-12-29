@@ -72,6 +72,7 @@ def rename_image_ref(m, original=True):
             full_img_path = op.join(args.image_folder_path, img_name_new)
 
         else:
+            print(args.file_parent)
             full_img_path = op.join(args.file_parent, ori_path)
             print(full_img_path)
             img_stem = Path(full_img_path).stem
