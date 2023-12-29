@@ -51,7 +51,6 @@ def formula_ops(_lines):
 def rename_image_ref(m, original=True):
     # global image_folder_path
     # debug
-    print(m.group(2))
     ori_path = m.group(2) if original else m.group(1)
     try:
         if op.exists(ori_path):
@@ -72,8 +71,8 @@ def rename_image_ref(m, original=True):
             full_img_path = op.join(args.image_folder_path, img_name_new)
 
         else:
-            print(args.file_parent)
-            full_img_path = op.join(args.file_parent, ori_path)
+            # full_img_path = op.join(args.file_parent, ori_path)
+            full_img_path = op.join(args.file_parent, op.abspath(ori_path))
             print(full_img_path)
             img_stem = Path(full_img_path).stem
             if not op.exists(full_img_path):
